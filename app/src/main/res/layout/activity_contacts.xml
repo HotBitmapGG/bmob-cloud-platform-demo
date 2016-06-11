@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/contact_top"
+        layout="@layout/top_contact_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/layout_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/base_bg"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:background="@drawable/user_add_top_bg"
+                android:orientation="horizontal" >
+
+                <ListView
+                    android:id="@+id/list_friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="none"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/dialog"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/v2_gallery_contacts_dialog_background"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:textColor="@color/base_actionbar_bg"
+                    android:textSize="35.0dip"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <com.hotbitmapgg.geekcommunity.widget.LetterView
+                android:id="@+id/right_letter"
+                android:layout_width="25dp"
+                android:layout_height="400dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="120dp"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+
+        <com.hotbitmapgg.geekcommunity.widget.CircleProgressView
+            android:id="@+id/contact_load"
+            android:layout_width="@dimen/circle_progress_view_default_size"
+            android:layout_height="@dimen/circle_progress_view_default_size"
+            android:layout_gravity="center"
+            app:matProg_barColor="?attr/colorPrimary"
+            app:matProg_barWidth="@dimen/circle_progress_view_default_border_width" />
+    </FrameLayout>
+
+</LinearLayout>

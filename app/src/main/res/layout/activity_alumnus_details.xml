@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_tap_bg"
+    android:fitsSystemWindows="true" >
+
+    <include
+        android:id="@+id/alumnus_details_top"
+        layout="@layout/top_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/alumnus_details_top" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/divider" >
+
+            <ListView
+                android:id="@+id/comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/transparent"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none"
+                android:smoothScrollbar="true"
+                android:visibility="gone" />
+
+            <com.hotbitmapgg.geekcommunity.widget.CircleProgressView
+                android:id="@+id/comment_circle_progress"
+                android:layout_width="@dimen/circle_progress_view_default_size"
+                android:layout_height="@dimen/circle_progress_view_default_size"
+                android:layout_gravity="center"
+                app:matProg_barColor="?attr/colorPrimary"
+                app:matProg_barWidth="@dimen/circle_progress_view_default_border_width" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_above="@+id/area_commit"
+            android:background="#d1d1d1" />
+
+        <LinearLayout
+            android:id="@+id/area_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#f5f6f7"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:id="@+id/alumnus_detail_love_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/alumnus_detail_love_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/archives_detail_love_no" />
+
+                <TextView
+                    android:id="@+id/alumnus_detail_love_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center_horizontal"
+                    android:text="喜欢"
+                    android:textColor="#a3a3a3"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:background="#d1d1d1" />
+
+            <LinearLayout
+                android:id="@+id/alumnus_detail_comment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/archives_detail_comment"
+                    android:drawablePadding="5dp"
+                    android:text="评论"
+                    android:textColor="#a3a3a3"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/comment_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/comment_round_bg"
+                android:ems="10"
+                android:hint="100字以内"
+                android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine|textImeMultiLine"
+                android:maxLength="100"
+                android:maxLines="3"
+                android:minHeight="36dp"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:visibility="gone" >
+            </EditText>
+
+            <Button
+                android:id="@+id/comment_commit"
+                android:layout_width="54dp"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/comment_send_norml"
+                android:onClick="onClick"
+                android:text="发送"
+                android:textColor="#9e9d9d"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_tap_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/set_info_top"
+        layout="@layout/top_layout" />
+
+    <RelativeLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/set_info_top"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="80dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/add_avator"
+            android:textColor="@color/font_normal"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.hotbitmapgg.geekcommunity.widget.RoundedImageView
+                android:id="@+id/iv_set_avator"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ico_user_default"
+                app:riv_border_color="@android:color/transparent"
+                app:riv_border_width="0dp"
+                app:riv_corner_radius="0dp"
+                app:riv_oval="true" />
+
+            <ImageView
+                android:id="@+id/iv_arraw"
+                style="@style/Smile.ImageView"
+                android:layout_width="20dp"
+                android:contentDescription="@string/action_settings"
+                android:src="@drawable/register_bottom_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layout_head"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/add_name"
+            android:textColor="@color/font_normal"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_set_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black_alpha"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/name_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/layout_name"
+        android:background="@color/white"
+        android:src="@drawable/list_inset_line3" />
+
+    <RelativeLayout
+        android:id="@+id/layout_nick"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/name_line"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/add_nick"
+            android:textColor="@color/font_normal"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_set_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black_alpha"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_nickarraw"
+                style="@style/Smile.ImageView"
+                android:layout_width="20dp"
+                android:contentDescription="@string/action_settings"
+                android:src="@drawable/register_bottom_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/nick_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/layout_nick"
+        android:background="@color/white"
+        android:src="@drawable/list_inset_line3" />
+
+    <RelativeLayout
+        android:id="@+id/layout_gender"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/nick_line"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/add_gender"
+            android:textColor="@color/font_normal"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_set_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black_alpha"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_gender_arrow"
+                style="@style/Smile.ImageView"
+                android:layout_width="20dp"
+                android:contentDescription="@string/action_settings"
+                android:src="@drawable/register_bottom_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/gender_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/layout_gender"
+        android:background="@color/white"
+        android:src="@drawable/list_inset_line3" />
+
+    <RelativeLayout
+        android:id="@+id/layout_sign"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/gender_line"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="个人简介"
+            android:textColor="@color/font_normal"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:textColor="@color/black_alpha"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_sing_arrow"
+                style="@style/Smile.ImageView"
+                android:layout_width="20dp"
+                android:contentDescription="@string/action_settings"
+                android:src="@drawable/register_bottom_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_add_friend"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/layout_sign"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/blue_corner_btn"
+        android:text="@string/add_friend"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_black_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_add_friend"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/black_tips"
+            android:textColor="@color/font_normal"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/btn_back"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector"
+            android:clickable="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/other_info_phone"
+                android:drawablePadding="5dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="添加黑名单"
+                android:textColor="@color/share_gray"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/line_bg" >
+        </View>
+
+        <LinearLayout
+            android:id="@+id/btn_chat"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector"
+            android:clickable="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/other_info_chat"
+                android:text="发消息"
+                android:textColor="@color/share_gray"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

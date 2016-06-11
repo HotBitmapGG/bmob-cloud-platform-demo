@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.hotbitmapgg.geekcommunity"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true"/>
+
+
+    <permission
+        android:name="cn.bmob.permission.push"
+        android:protectionLevel="normal"/>
+
+    <uses-permission android:name="cn.bmob.permission.push"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:name=".base.HomeMsgApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ColorTranslucentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+        </activity>
+
+        <!-- 添加好友 -->
+        <activity
+            android:name=".activity.AddFriendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <!-- 黑名单界面 -->
+        <activity
+            android:name=".activity.BlackListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 大图浏览界面 -->
+        <activity
+            android:name=".activity.ImageBrowserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme">
+        </activity>
+
+        <!-- 新好友界面 -->
+        <activity
+            android:name=".activity.NewFriendActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <!-- 个人资料设置 -->
+        <activity
+            android:name=".activity.UpdateInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 消息界面 -->
+        <activity
+            android:name=".activity.ChatActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+
+        <!-- 个人信息设置 -->
+        <activity
+            android:name=".activity.SetMyInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 通用设置 -->
+        <activity
+            android:name=".activity.CommonSettingActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 设置界面 -->
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 设置性别界面 -->
+        <activity
+            android:name=".activity.GenderActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <!-- 朋友圈界面 -->
+        <activity
+            android:name=".activity.AlumnusCircleActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 编辑说说界面 -->
+        <activity
+            android:name=".activity.EditAlumnusActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 朋友圈评论界面 -->
+        <activity
+            android:name=".activity.AlumnusDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+
+        <!-- 个人说说界面 -->
+        <activity
+            android:name=".activity.UserAlumnusActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 个性签名设置界面 -->
+        <activity
+            android:name=".activity.SetSignTextActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 获取验证码界面 -->
+        <activity
+            android:name=".activity.GetAuthCodeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 验证验证码界面 -->
+        <activity
+            android:name=".activity.VeirfyAuthCodeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- APP简介界面 -->
+        <activity
+            android:name=".activity.AppIntroduceActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 聊天选择相册界面 -->
+        <activity
+            android:name=".pick.CustomGalleryActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.netopen.homemessage.ACTION_PICK"/>
+                <action android:name="com.netopen.homemessage.ACTION_MULTIPLE_PICK"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 聊天相册预览界面 -->
+        <activity
+            android:name=".pick.CustomGalleryPreActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 意见反馈界面 -->
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 朋友圈图片预览界面 -->
+        <activity
+            android:name=".activity.SlidePreviewImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme">
+        </activity>
+
+        <!-- 朋友圈编辑上传图片预览界面 -->
+        <activity
+            android:name=".activity.AlumunsViewImageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 系统相机界面 -->
+        <activity
+            android:name=".activity.CameraActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|navigation"
+            android:launchMode="singleTop">
+        </activity>
+
+        <!-- 修改密码界面 -->
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 找回密码界面 -->
+        <activity
+            android:name=".activity.FindPasswordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 邮箱找回 -->
+        <activity
+            android:name=".activity.FindPwdEmailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 手机找回 -->
+        <activity
+            android:name=".activity.FindPwdPhoneActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 找回重置密码 -->
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 聊天设置界面 -->
+        <activity
+            android:name=".activity.UserInfoDetailsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <!-- webView界面 -->
+        <activity
+            android:name=".activity.AppWebViewActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!-- IM聊天所需的Pus -->
+        <service
+            android:name="cn.bmob.push.lib.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:permission="cn.bmob.permission.push"
+            android:process="cn.bmob.push">
+            <intent-filter>
+                <action android:name="cn.bmob.push.lib.service.PushService"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="cn.bmob.push.PushReceiver">
+            <intent-filter android:priority="2147483647">
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <!-- 监听网络连通性 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receive.HomeMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.push.action.MESSAGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 启动定时检测操作 -->
+        <service android:name="cn.bmob.im.poll.BmobPollService">
+            <intent-filter>
+                <action android:name="cn.bmob.im.service.BmobPollService"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

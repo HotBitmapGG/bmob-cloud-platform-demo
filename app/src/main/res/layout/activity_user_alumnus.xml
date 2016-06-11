@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_root"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/running_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/tv_running"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="努力加载中..."
+            android:textColor="@color/user_icon_bg"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/user_alumnus_pull_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.hotbitmapgg.geekcommunity.widget.pullzoomlistview.PullZoomListView
+            android:id="@+id/user_alumnus_pull_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"/>
+
+
+        <RelativeLayout
+            android:id="@+id/top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/user_icon_bg">
+
+            <ImageView
+                android:id="@+id/alumnus_left_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="15dp"
+                android:src="@drawable/action_button_back_pressed_light"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/alumnus_top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/error_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/error_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/top_bar_bg"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/error_btn"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/blue_corner_btn"
+            android:text="点击重试"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

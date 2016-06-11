@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/top_bar_bg"
+        android:padding="5dp" >
+
+        <com.hotbitmapgg.geekcommunity.widget.ClearEditText
+            android:id="@+id/et_msg_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/text_field"
+            android:drawableLeft="@drawable/edit_text_searcher"
+            android:drawablePadding="10dp"
+            android:hint="@string/message_search_hint"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

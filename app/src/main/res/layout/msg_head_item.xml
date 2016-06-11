@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/message_top_height"
+                android:orientation="vertical">
+
+    <com.hotbitmapgg.geekcommunity.widget.RoundedImageView
+        android:id="@+id/head_msg_photo"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ico_user_default"
+        app:riv_border_color="@android:color/transparent"
+        app:riv_border_width="0dp"
+        app:riv_corner_radius="0dp"
+        app:riv_oval="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/head_msg_photo"
+        android:minHeight="70dp">
+
+        <TextView
+            android:id="@+id/head_msg_name"
+            style="@style/Smile.TextView._Black"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="58dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:singleLine="true"
+            android:textColor="@drawable/recent_name_text_color_selector"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/head_msg_content"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/head_msg_name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="35dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:singleLine="true"
+            android:textColor="@drawable/recent_message_text_color_selector"
+            android:textSize="12sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_light"/>
+    </RelativeLayout>
+
+</RelativeLayout>

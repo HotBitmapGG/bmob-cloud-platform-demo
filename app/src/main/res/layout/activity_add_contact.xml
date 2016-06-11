@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/add_friend_top"
+        layout="@layout/top_layout" />
+
+    <com.hotbitmapgg.geekcommunity.widget.ClearEditText
+        android:id="@+id/et_find_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_action_bar_height"
+        android:background="@drawable/settings_item_bg"
+        android:drawableLeft="@drawable/edit_text_searcher"
+        android:drawablePadding="10dp"
+        android:hint="@string/message_search_hint"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <ListView
+        android:id="@+id/list_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@drawable/base_horizontal_line"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:fastScrollEnabled="false"
+        android:paddingBottom="10dp"
+        android:scrollbars="none" />
+
+</LinearLayout>

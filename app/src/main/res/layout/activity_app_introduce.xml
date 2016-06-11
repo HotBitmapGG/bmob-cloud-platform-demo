@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/app_top"
+        layout="@layout/top_layout" />
+
+    <com.hotbitmapgg.geekcommunity.widget.SpringScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="嗶哩嗶哩  for Android 功能简介"
+                android:textColor="@color/black_alpha"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_light" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/app_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:lineSpacingExtra="3dp"
+                android:text="1.基于Bmob后台管理用户,拥有社交,圈子,IM即时通讯等功能.\n2.主页高仿B站设计,遵循Google的MD设计规范.\n3.主界面按照B站分区类型推荐最新视频,最热推荐,排行榜,专题等功能.\n4.2.0增加B站全站搜索功能,离线缓存功能,以及游戏中心功能.\n5.更多功能请期待3.0版本,@HotBitmapGG."
+                android:textColor="@color/black_alpha"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </com.hotbitmapgg.geekcommunity.widget.SpringScrollView>
+
+</LinearLayout>

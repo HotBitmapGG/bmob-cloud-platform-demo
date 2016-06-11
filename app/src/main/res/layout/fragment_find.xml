@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_tap_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/find_top"
+        layout="@layout/top_find_layout" />
+
+    <com.hotbitmapgg.geekcommunity.widget.SpringScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_circle"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector" >
+
+                <ImageView
+                    android:id="@+id/iv_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:scaleType="centerCrop"
+                    android:tint="@color/font_normal"
+                    android:src="@drawable/ic_drawer_follow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_circle"
+                    android:text="极客圈"
+                    android:textColor="@color/font_normal"
+                    android:textSize="16sp" />
+                
+                <ImageView 
+                    android:id="@+id/alumnus_update_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/camera_icon_new"
+                    android:layout_toLeftOf="@+id/circle_right_arrow"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    
+                    />
+
+                <ImageView
+                    android:id="@+id/circle_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.hotbitmapgg.geekcommunity.widget.SpringScrollView>
+
+</LinearLayout>

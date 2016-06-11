@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <!--
+             <com.netopen.homemessage.view.ImageZoomView
+        android:id="@+id/zoomView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    -->
+
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/photoview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:scaleType="fitCenter" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

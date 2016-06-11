@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/imgQueue"
+        android:layout_width="fill_parent"
+        android:layout_height="115dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/no_media" />
+
+    <LinearLayout
+        android:id="@+id/select_ll"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imgQueueMultiSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/icon_pick_selector"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center" />
+    </LinearLayout>
+
+</RelativeLayout>

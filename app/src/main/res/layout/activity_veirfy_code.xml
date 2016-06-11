@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_tap_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/veirfy_top"
+        layout="@layout/top_layout" />
+
+    <TextView
+        android:id="@+id/tv_code_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#ff555555" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/settings_item_bg"
+        android:gravity="center_vertical"
+        android:minHeight="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="6" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_code"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_code_selector"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="重新获取"
+            android:textColor="#ff888888"
+            android:textSize="12sp" 
+            android:visibility="visible"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_validate"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_corner_btn"
+        android:minHeight="40dp"
+        android:text="下一步"
+        android:textColor="@color/white" />
+
+</LinearLayout>

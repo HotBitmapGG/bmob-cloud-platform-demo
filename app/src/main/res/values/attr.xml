@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <attr name="src" format="reference"></attr>
+    <attr name="hf">
+        <enum name="all" value="0" />
+        <enum name="head" value="1" />
+        <enum name="foot" value="2" />
+    </attr>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+        <attr name="src" />
+        <attr name="hf" />
+    </declare-styleable>
+    <declare-styleable name="RoundImageViewByXfermode">
+        <attr name="borderRadius" />
+        <attr name="type" />
+        <attr name="hf" />
+    </declare-styleable>
+    <declare-styleable name="Emojicon">
+        <attr name="emojiconSize" format="dimension" />
+        <attr name="emojiconAlignment" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="baseline" value="1" />
+        </attr>
+        <attr name="emojiconTextStart" format="integer" />
+        <attr name="emojiconTextLength" format="integer" />
+        <attr name="emojiconUseSystemDefault" format="boolean" />
+    </declare-styleable>
+
+    <!-- StatusBarHeaderView -->
+    <declare-styleable name="StatusBarHeaderView">
+        <attr name="colorNormal" format="reference" />
+        <attr name="colorDark" format="reference" />
+        <attr name="enableMode" format="enum">
+            <enum name="Kitkat" value="1" />
+            <enum name="Lollipop" value="2" />
+            <enum name="All" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <!-- NavigationView -->
+    <declare-styleable name="NavigationView">
+        <attr name="android:background" />
+        <attr name="android:fitsSystemWindows" />
+        <attr name="android:maxWidth" />
+        <attr name="elevation" />
+        <attr name="menu" format="reference" />
+        <attr name="itemIconTint" format="color" />
+        <attr name="itemTextColor" format="color" />
+        <attr name="itemBackground" format="reference" />
+        <attr name="headerLayout" format="reference" />
+    </declare-styleable>
+
+    <!-- Android Design Support Library -->
+    <declare-styleable name="ScrimInsetsFrameLayout">
+        <attr name="insetForeground" format="color|reference" />
+    </declare-styleable>
+
+</resources>

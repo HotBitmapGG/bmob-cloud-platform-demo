@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@drawable/ico_loading_small_1"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_2"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_3"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_4"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_5"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_6"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_7"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_8"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_9"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_10"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_11"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@drawable/ico_loading_small_12"
+        android:duration="150">
+    </item>
+
+</animation-list>

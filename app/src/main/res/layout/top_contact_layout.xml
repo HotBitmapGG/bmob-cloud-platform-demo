@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/top_bar_bg" >
+
+        <ImageView
+            android:id="@+id/left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:src="@drawable/action_button_back_pressed_light" />
+
+        <TextView
+            android:id="@+id/contact_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的好友"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:id="@+id/contact_top_pro"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/contact_top_title"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/pro_anim"
+            android:indeterminateDuration="500"
+            android:indeterminateOnly="true"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/contact_right_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/action_button_rank_pressed_light" />
+
+            <ImageView
+                android:id="@+id/contact_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/action_settings"
+                android:src="@drawable/msg_tips" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.hotbitmapgg.geekcommunity.widget.emojicon.EmojiconEditText
+            android:id="@+id/edit_user_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/base_edit_input"
+            android:gravity="left|center"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine|textImeMultiLine"
+            android:maxLines="5"
+            android:minHeight="36dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textSize="14sp"
+            emojicon:emojiconSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_chat_send"
+            android:layout_width="56dp"
+            android:layout_height="36dp"
+            android:layout_gravity="right|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/sending" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/btn_chat_keybord"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="toAction"
+            android:clickable="true"
+            android:src="@drawable/icon_chat_jianpan" />
+
+        <ImageView
+            android:id="@+id/chat_bottom_voice"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            android:src="@drawable/icon_chat_yuyin" />
+
+        <ImageView
+            android:id="@+id/chat_bottom_gallery"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            android:src="@drawable/icon_chat_xiangce" />
+
+        <ImageView
+            android:id="@+id/chat_bottom_camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            android:src="@drawable/icon_chat_xiangji" />
+
+        <ImageView
+            android:id="@+id/chat_bottom_location"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            android:src="@drawable/icon_chat_weizhi" />
+
+        <ImageView
+            android:id="@+id/btn_chat_emote"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            android:src="@drawable/icon_chat_biaoqing" />
+
+        <ImageView
+            android:id="@+id/btn_chat_add"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="toAction"
+            android:clickable="true"
+            android:src="@drawable/icon_chat_add" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/msg_emote_divider"
+        android:focusable="false" />
+
+    <LinearLayout
+        android:id="@+id/layout_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/layout_emo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <FrameLayout
+                android:id="@+id/emojicons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_voice"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_speak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_recording_select_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="按住说话"
+                android:textColor="#00D3A9"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/layout_add"
+            layout="@layout/include_chat_add"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

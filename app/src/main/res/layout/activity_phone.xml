@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/phone_top"
+        layout="@layout/top_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/settings_item_bg"
+        android:gravity="center_vertical"
+        android:minHeight="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <EditText
+            android:id="@+id/et_find_phone"
+            style="@style/Register_Edit"
+            android:hint="手机号"
+            android:textColor="@color/black_alpha"
+            android:textSize="14sp" />
+
+        <requestFocus />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/settings_item_bg"
+        android:gravity="center_vertical"
+        android:minHeight="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <EditText
+            android:id="@+id/et_find_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:ems="10"
+            android:hint="验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/black_alpha"
+            android:textSize="14sp" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_find_code"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_code_selector"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="获取验证码"
+            android:textColor="#ff888888"
+            android:textSize="12sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/blue_corner_btn"
+        android:text="确定"
+        android:textColor="@color/base_color_text_white"
+        android:textSize="@dimen/text_size_large" />
+
+</LinearLayout>

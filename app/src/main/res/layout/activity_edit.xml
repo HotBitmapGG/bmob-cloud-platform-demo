@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_tap_bg" >
+
+    <include
+        android:id="@+id/edit_top"
+        layout="@layout/top_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edit_top"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/say_with_child" >
+
+            <com.hotbitmapgg.geekcommunity.widget.emojicon.EmojiconEditText
+                android:id="@+id/edit_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="说点什么吧..."
+                android:paddingTop="5dp"
+                android:inputType="textMultiLine"
+                android:textColor="@color/font_normal"
+                android:textSize="16sp"
+                emojicon:emojiconSize="24sp" >
+            </com.hotbitmapgg.geekcommunity.widget.emojicon.EmojiconEditText>
+
+            <ImageButton
+                android:id="@+id/add_emojis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center|top"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:src="@drawable/setting_expression_icon" />
+        </FrameLayout>
+
+        <com.hotbitmapgg.geekcommunity.alumnus.utils.NoScrollGridView
+            android:id="@+id/gv_show_photos"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:horizontalSpacing="2dp"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_layout_emo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:id="@+id/edit_emojicons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</RelativeLayout>

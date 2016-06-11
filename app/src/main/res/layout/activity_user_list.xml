@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/user_list_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/top_bar_bg" >
+
+        <ImageView
+            android:id="@+id/user_list_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="15dp"
+            android:src="@drawable/action_button_back_pressed_light" />
+
+        <TextView
+            android:id="@+id/user_list_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.netopen.homemessage.md.view.CircleProgressView
+            android:id="@+id/circle_progress"
+            android:layout_width="@dimen/circle_progress_view_default_size"
+            android:layout_height="@dimen/circle_progress_view_default_size"
+            android:layout_gravity="center"
+            app:matProg_barColor="?attr/colorPrimary"
+            app:matProg_barWidth="@dimen/circle_progress_view_default_border_width" />
+
+        <ListView
+            android:id="@+id/user_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:divider="@color/line_bg"
+            android:dividerHeight="1px"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

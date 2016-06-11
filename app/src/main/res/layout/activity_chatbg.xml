@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/chatbg_top"
+        layout="@layout/top_layout" />
+
+    <GridView
+        android:id="@+id/chat_bg_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:gravity="center"
+        android:scrollbars="none"
+        android:listSelector="@color/transparent"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+</LinearLayout>

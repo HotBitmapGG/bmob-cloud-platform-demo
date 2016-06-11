@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingTop="13dp">
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_top">
+
+        <com.hotbitmapgg.geekcommunity.widget.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/base_scrollview_top_height"
+            android:layout_height="@dimen/base_scrollview_top_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin_chat_top"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ico_user_default"
+            app:riv_border_color="@android:color/transparent"
+            app:riv_border_width="0dp"
+            app:riv_corner_radius="0dp"
+            app:riv_oval="true"/>
+
+        <com.hotbitmapgg.geekcommunity.widget.RoundedImageView
+            android:id="@+id/iv_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin_chat_top"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/iv_avatar"
+            android:adjustViewBounds="true"
+            android:background="@drawable/chat_right_select"
+            android:maxHeight="180dp"
+            android:maxWidth="180dp"
+            android:paddingBottom="2dp"
+            android:paddingRight="5dp"
+            app:riv_border_color="@android:color/transparent"
+            app:riv_border_width="3dp"
+            app:riv_corner_radius="6dp"
+            app:riv_oval="false"/>
+
+        <ImageView
+            android:id="@+id/iv_fail_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_picture"
+            android:clickable="true"
+            android:contentDescription="@string/action_settings"
+            android:src="@drawable/archives_send_failure"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_send_status"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_picture"
+            android:textSize="12sp"
+            android:visibility="invisible"/>
+
+        <ProgressBar
+            android:id="@+id/progress_load"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_picture"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/pro_anim"
+            android:indeterminateDuration="500"
+            android:indeterminateOnly="true"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+</LinearLayout>

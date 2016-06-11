@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/chat_top"
+        layout="@layout/top_layout" />
+
+    <FrameLayout
+        android:id="@+id/chat_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:background="@color/white" >
+
+        <ListView
+            android:id="@+id/mListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="false"
+            android:overScrollMode="never"
+            android:listSelector="@color/transparent"
+            android:paddingBottom="10dp"
+            android:scrollbars="none"
+            android:stackFromBottom="false"
+            android:transcriptMode="normal" />
+
+        <RelativeLayout
+            android:id="@+id/layout_record"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/chat_top_voice_bg"
+            android:padding="10dp"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/iv_record"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/action_settings"
+                android:src="@drawable/chat_icon_voice1" />
+
+            <TextView
+                android:id="@+id/tv_voice_tips"
+                style="@style/Smile.TextView._White"
+                android:layout_below="@id/iv_record"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/voice_up_tips"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <include layout="@layout/include_chat_bottom_bar" />
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:background="@drawable/bg_dialog"
+    android:minWidth="300dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" 
+        android:layout_marginTop="30dp"
+        >
+
+        <TextView
+            android:id="@+id/dialog_message"
+            style="@style/Smile.TextView._Black"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="fafsafafa"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/black_alpha"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/dialog_customPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/dialog_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_bg" />
+
+    <LinearLayout
+        android:id="@+id/dialog_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/dialog_leftspacer"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/dialog_negativebutton"
+            style="@style/Smile.TextView._Black"
+            android:layout_width="0px"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:maxLines="2"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:textColor="@color/black_alpha"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/line_bg" />
+
+        <Button
+            android:id="@+id/dialog_positivebutton"
+            style="@style/Smile.TextView._Black"
+            android:layout_width="0px"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_selector"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:textColor="@color/blue_main"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/dialog_rightspacer"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
